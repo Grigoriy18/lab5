@@ -1,0 +1,100 @@
+1)import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Введіть п'ять слів:");
+
+        String word1 = scanner.next();
+        String word2 = scanner.next();
+        String word3 = scanner.next();
+        String word4 = scanner.next();
+        String word5 = scanner.next();
+
+        String sentence = word1.concat(" ").concat(word2).concat(" ").concat(word3).concat(" ").concat(word4).concat(" ").concat(word5);
+
+        System.out.println("Результат: " + sentence);
+    }
+}
+
+2)import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Введіть п'ять слів:");
+
+        String word1 = scanner.next();
+        String word2 = scanner.next();
+        String word3 = scanner.next();
+        String word4 = scanner.next();
+        String word5 = scanner.next();
+
+        char firstLetter1 = word1.substring(0, 1).charAt(0);
+        char firstLetter2 = word2.substring(0, 1).charAt(0);
+        char firstLetter3 = word3.substring(0, 1).charAt(0);
+        char firstLetter4 = word4.substring(0, 1).charAt(0);
+        char firstLetter5 = word5.substring(0, 1).charAt(0);
+
+        System.out.println("Перші літери слів:");
+        System.out.println(firstLetter1);
+        System.out.println(firstLetter2);
+        System.out.println(firstLetter3);
+        System.out.println(firstLetter4);
+        System.out.println(firstLetter5);
+    }
+}
+
+4) import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Введіть три числа:");
+
+        double number1 = 0;
+        double number2 = 0;
+        double number3 = 0;
+
+        try {
+            number1 = Double.parseDouble(scanner.nextLine());
+            number2 = Double.parseDouble(scanner.nextLine());
+            number3 = Double.parseDouble(scanner.nextLine());
+        } catch (NumberFormatException e) {
+            System.out.println("Введено нечислове значення");
+            System.exit(0);
+        }
+
+        double maxNumber = Math.max(number1, Math.max(number2, number3));
+
+        System.out.println("Найбільше дробове число: " + maxNumber);
+    }
+}
+
+5)import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Введіть перший рядок:");
+        String string1 = scanner.nextLine();
+
+        System.out.println("Введіть другий рядок:");
+        String string2 = scanner.nextLine();
+
+        int length1 = string1.length();
+        int length2 = string2.length();
+
+        if (length1 > length2) {
+            System.out.println("Перший рядок має більшу кількість символів");
+        } else if (length2 > length1) {
+            System.out.println("Другий рядок має більшу кількість символів");
+        } else {
+            System.out.println("Рядки мають однакову кількість символів");
+        }
+    }
+}
